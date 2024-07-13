@@ -35,15 +35,17 @@ const Name = () => {
         style={Style.image}>
         <Text style={Style.text}>ENTER PLAYER NAME</Text>
         <TextInput
-          placeholder=" Player 1"
+          placeholder="Player 1"
           style={Style.name}
           maxLength={8}
+          value={playerName.player1}
           onChangeText={player1 => onChangeTextHandler('player1', player1)}
         />
         <TextInput
-          placeholder=" Player 2"
+          placeholder="Player 2"
           style={Style.name}
           maxLength={8}
+          value={playerName.player2}
           onChangeText={player2 => onChangeTextHandler('player2', player2)}
         />
         <TouchableOpacity
@@ -56,7 +58,6 @@ const Name = () => {
           }}>
           <Text style={{color: 'white', fontSize: 22}}> Start Game </Text>
         </TouchableOpacity>
-        <Text>{playerName.player1}</Text>
       </ImageBackground>
     </View>
   );
