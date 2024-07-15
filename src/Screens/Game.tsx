@@ -53,7 +53,7 @@ const Game = () => {
       case 1:
         return <Text style={Styles.tileX}>X</Text>;
       case -1:
-        return <Text style={Styles.tile0}>O</Text>;
+        return <Text style={Styles.tileO}>O</Text>;
       default:
         return <View />;
     }
@@ -153,9 +153,9 @@ const Game = () => {
 
   return (
     <View style={Styles.Container}>
-      <ImageBackground
-        source={require('../assets/images1.jpeg')}
-        style={Styles.imageContainer}>
+      {/* <ImageBackground
+        //source={require('../assets/images1.jpeg')}
+        style={Styles.imageContainer}> */}
         {/* <View style = {{flexDirection : 'row',marginBottom : '18%'}}> */}
         <View style={{marginBottom: '18%', marginLeft: '2%'}}>
           <Text style={[Styles.text, {color: '#00ffff'}]}>
@@ -244,7 +244,7 @@ const Game = () => {
             <Text style={{color: 'white', fontSize: 28}}> ExitGame </Text>
           </TouchableOpacity>
         </View>
-      </ImageBackground>
+      {/* </ImageBackground> */}
     </View>
   );
 };
@@ -255,6 +255,7 @@ const Styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#9F73D0'
   },
   tile: {
     width: 120,
@@ -267,15 +268,16 @@ const Styles = StyleSheet.create({
     width: 120,
     height: 120,
     color: '#00ffff',
+    //color: '#063970',
     fontSize: 70,
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
     textShadowColor: 'white',
-    textShadowOffset: {width: 5, height: 5},
-    textShadowRadius: 10,
+    textShadowOffset: {width: 3, height: 3},
+    textShadowRadius: 3,
   },
-  tile0: {
+  tileO: {
     width: 120,
     height: 120,
     color: '#66ff66',
@@ -284,8 +286,8 @@ const Styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     textShadowColor: 'white',
-    textShadowOffset: {width: 5, height: 5},
-    textShadowRadius: 10,
+    textShadowOffset: {width: 3, height: 3},
+    textShadowRadius: 3,
   },
   imageContainer: {
     height: '100%',
@@ -299,6 +301,7 @@ const Styles = StyleSheet.create({
     color: 'white',
     fontSize: 25,
     alignItems: 'center',
+    fontWeight: '600'
     // textShadowColor:'white',
     // textShadowOffset:{width: 5, height: 5},
     // textShadowRadius : 8,

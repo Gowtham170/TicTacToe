@@ -31,7 +31,7 @@ const Name = () => {
   return (
     <View style={Style.Container}>
       <ImageBackground
-        source={require('../assets/images1.jpeg')}
+        //source={require('../assets/images1.jpeg')}
         style={Style.image}>
         <Text style={Style.text}>ENTER PLAYER NAME</Text>
         <TextInput
@@ -72,6 +72,7 @@ const Style = StyleSheet.create({
     height: '2%',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#9F73D0'
   },
 
   name: {
@@ -103,8 +104,8 @@ const Style = StyleSheet.create({
     borderRadius: 40,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#00bfff',
-    borderColor: '#00bfff',
+    backgroundColor: '#85C1E9',
+    borderColor: '#85C1E9',
     textAlign: 'center',
   },
 
